@@ -40,4 +40,3 @@ Individiual licensing arrangements can be made if this is an issue for your proj
 
 * **File Icon** - *Created by justicon* - [Flaticon](https://www.flaticon.com/free-icons/file)
 * **Billie Thompson** - *README & Contribution Templates* - [PurpleBooth](https://github.com/PurpleBooth)
-* **FeedReader** - *Global UX* - [FeedReader](https://feedreader.com/)
