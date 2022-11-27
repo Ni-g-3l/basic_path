@@ -34,8 +34,6 @@ print(f"App home : {basic_path.app_home()}")
 from pathlib import *
 import basic_path
 
-basic_path.init_from_poetry_toml('pyproject.toml')
-
 log_folder_key = "LOG_FOLDER"
 basic_path.register_path(log_folder_key, Path.home() / '.log')
 
