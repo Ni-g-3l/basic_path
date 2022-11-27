@@ -12,6 +12,47 @@
 
 This lib provide a convenient way to access basic paths of the system and the application.
 
+## Basic uses 
+
+### Get basic paths
+
+```python
+import basic_path
+
+basic_path.init_from_poetry_toml('pyproject.toml')
+
+print(f"User home : {basic_path.user_home()}")
+>> /home/nig3l
+
+print(f"App home : {basic_path.app_home()}")
+>> /home/nig3l/.basic_path
+```
+
+### Register app's paths
+
+```python
+from pathlib import *
+import basic_path
+
+basic_path.init_from_poetry_toml('pyproject.toml')
+
+log_folder_key = "LOG_FOLDER"
+basic_path.register_path(log_folder_key, Path.home() / '.log')
+
+print(f"Log folder : {basic_path.resolve_path(log_folder_key)}")
+>> /home/nig3l/.log
+```
+
+### Get tmp folder
+```python
+import basic_path
+
+print(f"Tmp folder : {basic_path.create_tmp_folder()}")
+>> /tmp/c6ab7dff-7f88-4874-91d7-f6e5f8f30661
+```
+
+
+
 ## 🐛 Issues / Bugs / FAQs / Feature Requests
 
 If you encounter any issues or have any ideas, please file them in our [Issue Tracker](https://github.com/Ni-g-3l/basic_path/issues).
